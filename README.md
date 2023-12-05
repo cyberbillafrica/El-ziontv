@@ -1,2 +1,2 @@
-# El-ziontv
-The official website of El-Zion Global Network Television designed by CyberBill Africa 🌍 
+# Ọ Di Mma Amakpu NGO 
+The official website of Ọ Di Mma Amakpu Autonomous Community Non Governmental Organization designed by CyberBill Africa 🌍 
