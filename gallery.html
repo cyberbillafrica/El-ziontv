@@ -49,14 +49,24 @@
 @media (max-width: 767px) {
   .slide {
     flex: 0 0 100%;
+    margin: 0 10px 10px 10px;
   }
 }
 
-.title {
-  margin-top: 10px;
-  font-size: 16px;
-  font-weight: bold;
+@media (min-width: 768px) {
+  .slider {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .slide {
+    flex: 0 0 calc(50% - 20px);
+    margin: 0 10px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
 }
+
 </style>
 <body>
     <!-- Spinner Start -->
