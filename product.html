@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title>O Di Mma Agbani - NGO</title>
@@ -16,7 +15,7 @@
 <!-- Favicon -->
     <link href="img/FB_IMG_1635852920250.jpg" rel="icon">
 
-    <!-- Google Web Fonts -->
+ <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">   
@@ -38,40 +37,47 @@
     <link href="css/other.css" rel="stylesheet">
 
 </head>
+  
+<style>
+        .slider {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            overflow: hidden; /* Ensure hidden overflow for scrolling effect */
+        }
 
+        .slide {
+            flex: 0 0 50%;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            text-align: center;
+        }
 
+        .slide img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        p {
+            margin-bottom: 5px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .slider {
+                flex-wrap: nowrap;
+                overflow-x: scroll;
+            }
+
+            .slide {
+                flex: 0 0 100%;
+            }
+        }
+    </style>
+</head>
 <body>
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
-    </div>
-    <!-- Spinner End -->
-
-
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-dark px-0">
-        <div class="row g-0 d-none d-lg-flex">
-            <div class="col-lg-6 ps-5 text-start">
-                <div class="h-100 d-inline-flex align-items-center text-light">
-                    <span>Follow Us:</span>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-6 text-end">
-                <div class="h-100 bg-secondary d-inline-flex align-items-center text-dark py-2 px-4">
-                    <span class="me-2 fw-semi-bold"><i class="fa fa-phone-alt me-2"></i>Call Us:</span>
-                    <span>+012 345 6789</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar End -->
-
-
-    <!-- Navbar Start -->
+<!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5">
         <a href="index.html" class="navbar-brand d-flex align-items-center">
             <h4 class="m-0 text-primary">Maka Ọ Di Mma Agbani</h4>
@@ -108,27 +114,8 @@
         </div>
     </div>
     <!-- Page Header End -->
+
     
-  <!-- Slide image start--
-    <div class="container-xxl py-2">
-         <div class="mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-        <div class="carouse-container">
-        <div class="carouse">
-            <img src="img/agbanisymbol.jpeg" alt="Image 1">
-            <img src="img/group6.jpg" alt="Image 2">
-            <img src="img/groupteachers.jpg" alt="Image 3">
-            <img src="img/ubiateachers.jpg" alt="Image 4">
-            <img src="img/modelteachers.jpg" alt="Image 5">
-            <img src="img/mbogodoteachers.jpg" alt="Image 6">
-            <img src="img/stationteachers.jpg" alt="Image 7">
-            <img src="img/group2.jpg" alt="Image 8">
-            </div>
-             </div>
-	   </div>-->
-        
-
-
-
 <div class="slider">
   <div class="slide">
        <img src="img/FB_IMG_1635852920250.jpg" alt="Agbani">
@@ -136,8 +123,7 @@
 </div>
 
   <div class="slide">
-      <div class="slider">
-<img src="img/100days.jpg" alt="Image 2">
+      <img src="img/100days.jpg" alt="Image 2">
     <p style="color: red;">Supporting Government in Education</p>
    </div>
   <div class="slide">
@@ -146,8 +132,7 @@
   </div>
   
   <div class="slide">
-   <div class="slider">
- <img src="img/groupteachers.jpg" alt="Sunset sky">
+    <img src="img/groupteachers.jpg" alt="Sunset sky">
     <p style="color: purple;">Group School Agbani Town Teachers</p>
   </div>
   
@@ -155,22 +140,43 @@
    <div class="slide">
     <img src="img/centralschool1.jpg" alt="Image 4">
        <p>Central school Teachers 1</p>
-   </div>
+  </div>
+    <div class="slide">
+      <img src="img/group6.jpg" alt="Image 2">
+    <p>Our team School outreach </p>
+    </div>
+    <div class="slide">
+    <img src="img/ubiateachers.jpg" alt="Image 4"> <p>Ubia Primary school Teachers</p>
+  </div>
+<div class="slide">
+       <img src="img/modelteachers.jpg" alt="Image 5">
+    <p>Model Teachers</p>
+  </div>
+  <div class="slide">
+ <img src="img/mbogodoteachers.jpg" alt="Image 6">
+   <p>Mbogodo Primary School Teachers</p>
+  </div>
+<div class="slide">
+ <img src="img/stationteachers.jpg" alt="Image 5">
+    <p>Station Teachers</p>
+  </div>
+    <div class="slide">
+        <img src="img/group1.jpg" alt="Sunset sky">
+        <p>School Visit</p>
+    </div>
+    <div class="slide">
+        <img src="img/centralschool2.jpg" alt="Majestic mountain">
+        <p>Central School Teachers 2</p>
+    </div>
 </div>
 
-	
-<!-- Slide image End-->
-  <div class="container-xxl py-2">
-  <div class="container">
- <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;"> 	
-  <hr>
-<h2 class="text-primary">Agbani Teacher's Hall of Fame</h2>
+<div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;"> 	
 <hr>
- </div>
-  </div>
-  </div>
-	
-<!-- Convener Start -->
+<h2 class="text-primary">Agbani Teacher's Hall of Fame</h2>
+<class><b><i style="color: red;">coming soon...</i></b></class>
+<hr>
+</div>
+ <!-- Convener Start -->
    	
 	<div class="container-xxl py-2">
         <div class="container">
@@ -182,7 +188,7 @@
         <!--<div class="profile-container">
         <img class="profile-image" src="img/mota_1.jpg" alt="Nze Ikechukwu Nnamani - Mota" style="width: 200px; height: 200px;">-->
        <div>
-	<h1 class="text-primary">Nze Ikechukwu Nnamani</h1>
+	<h1 style="color: #26d48c;">Nze Ikechukwu Nnamani</h1>
         <h6 class="profile-title"><i>Akunnia Mota, King of No Kingdom</i></h6>
         </div>
 		
@@ -204,9 +210,10 @@
 	</main>
     </div>
    </div>
-</div>
-	
-<!-- Product Start -->
+</div>   
+    
+    
+ <!-- Product Start -->
       <div class="container-xxl py-2">
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
@@ -316,8 +323,26 @@
     </div>
     <!-- Product End -->
 
+   
+    
+    
+    
+    
+<script>
+    const slider = document.querySelector('.slider');
 
-    <!-- Copyright Start -->
+    function showNextSlide() {
+        // Move the first slide to the end for a sliding effect
+        const firstSlide = slider.firstElementChild;
+        slider.appendChild(firstSlide);
+    }
+
+    // Auto slide every 5 seconds
+    setInterval(showNextSlide, 5000);
+</script>
+
+
+<!-- Copyright Start -->
     <div class="container-fluid bg-secondary text-body copyright py-4">
         <div class="container">
             <div class="row">
@@ -337,32 +362,6 @@
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-<script>
-const slider = document.querySelector('.slider');
 
-    function showNextSlide() {
-        // Move the first slide to the end for a sliding effect
-        const firstSlide = slider.firstElementChild;
-        slider.appendChild(firstSlide);
-    }
-
-    // Auto slide every 5 seconds
-    setInterval(showNextSlide, 5000);
-
-</script>
-    <!-- JavaScript Libraries --
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/parallax/parallax.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>-->
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
 </body>
-
 </html>
