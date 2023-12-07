@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .carousel-container {
+            display: flex;
+            overflow: hidden;
+            margin: 10px; /* Adjust the margin as needed */
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel img {
+            width: 100%;
+            object-fit: cover;
+            margin-right: 10px; /* Adjust the margin as needed */
+        }
+
+        .image-description {
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        @media (min-width: 768px) {
+            .carousel img {
+                flex: 0 0 calc(50% - 10px); /* Two images per row with margin */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div>
+                <img src="img/gallery-1.jpg" alt="Image 1 - Beautiful Scenery">
+                <div class="image-description">Beautiful Scenery</div>
+            </div>
+            <div>
+                <img src="img/gallery-2.jpg" alt="Image 2 - City Lights at Night">
+                <div class="image-description">City Lights at Night</div>
+            </div>
+            <div>
+                <img src="img/gallery-3.jpg" alt="Image 3 - Serene Beach Sunset">
+                <div class="image-description">Serene Beach Sunset</div>
+            </div>
+            <div>
+                <img src="img/gallery-4.jpg" alt="Image 4 - Lush Green Forest">
+                <div class="image-description">Lush Green Forest</div>
+            </div>
+            <div>
+                <img src="img/gallery-5.jpg" alt="Image 5 - Urban Landscape">
+                <div class="image-description">Urban Landscape</div>
+            </div>
+            <div>
+                <img src="img/gallery-6.jpg" alt="Image 6 - Mountain Peaks">
+                <div class="image-description">Mountain Peaks</div>
+            </div>
+            <div>
+                <img src="img/gallery-7.jpg" alt="Image 7 - Tranquil Lake View">
+                <div class="image-description">Tranquil Lake View</div>
+            </div>
+            <div>
+                <img src="img/gallery-8.jpg" alt="Image 8 - Colorful Autumn Foliage">
+                <div class="image-description">Colorful Autumn Foliage</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const carousel = document.querySelector('.carousel');
+        let currentIndex = 0;
+
+        function showNextSlide() {
+            currentIndex = (currentIndex + 1) % carousel.children.length;
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            const translateValue = -currentIndex * 100 + '%';
+            carousel.style.transform = `translateX(${translateValue})`;
+        }
+
+        setInterval(showNextSlide, 5000); // Auto slide every 5 seconds
+    </script>
+</body>
+</html>
