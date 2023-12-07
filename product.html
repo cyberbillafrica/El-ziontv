@@ -366,20 +366,20 @@ main {
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 <script>
-        const carousel = document.querySelector('.carousel');
+        const carouse = document.querySelector('.carouse');
         let currentIndex = 0;
 
         function showNextSlide() {
-            currentIndex = (currentIndex + 1) % carousel.children.length;
-            updateCarousel();
+            currentIndex = (currentIndex + 1) % carouse.children.length;
+            updateCarouse();
         }
 
-        function updateCarousel() {
+        function updateCarouse() {
             const translateValue = -currentIndex * 100 + '%';
-            carousel.style.transform = `translateX(${translateValue})`;
+            carouse.style.transform = `translateX(${translateValue})`;
         }
 
-        setInterval(showNextSlide, 5000); // Auto slide every 5 seconds
+        setInterval(showNextSlide, 3000); // Auto slide every 5 seconds
 </script>
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
