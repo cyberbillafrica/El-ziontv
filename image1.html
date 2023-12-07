@@ -1,118 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .carousel-container {
-            position: relative;
-            overflow: hidden;
-            margin: 10px; /* Adjust the margin as needed */
-        }
-
-        .carousel {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .carousel img {
-            width: 100%;
-            object-fit: cover;
-            margin-right: 10px; /* Adjust the margin as needed */
-        }
-
-        .image-title {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            padding: 10px;
-            text-align: center;
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        .carousel-container:hover .image-title {
-            opacity: 1;
-        }
-
-        @media (min-width: 768px) {
-            .carousel img {
-                flex: 0 0 calc(50% - 10px); /* Two images per row with margin */
-            }
-        }
-    </style>
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
+<style>
+.slider {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.slide {
+  flex: 0 0 50%;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  text-align: center;
+}
+
+.slide img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .slider {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+
+  .slide {
+    flex: 0 0 100%;
+  }
+}
+</style>
 <body>
-    <div class="carousel-container">
-        <div class="carousel">
-            <div>
-                <img src="img/gallery-1.jpg" alt="Image 1">
-                <div class="image-title">Title for Image 1</div>
-            </div>
-            <div>
-                <img src="img/gallery-2.jpg" alt="Image 2">
-                <div class="image-title">Title for Image 2</div>
-            </div>
-            <div>
-                <img src="img/gallery-3.jpg" alt="Image 3">
-                <div class="image-title">Title for Image 3</div>
-            </div>
-            <div>
-                <img src="img/gallery-4.jpg" alt="Image 4">
-                <div class="image-title">Title for Image 4</div>
-            </div>
-            <div>
-                <img src="img/gallery-5.jpg" alt="Image 5">
-                <div class="image-title">Title for Image 5</div>
-            </div>
-            <div>
-                <img src="img/gallery-6.jpg" alt="Image 6">
-                <div class="image-title">Title for Image 6</div>
-            </div>
-            <div>
-                <img src="img/gallery-7.jpg" alt="Image 7">
-                <div class="image-title">Title for Image 7</div>
-            </div>
-            <div>
-                <img src="img/gallery-8.jpg" alt="Image 8">
-                <div class="image-title">Title for Image 8</div>
-            </div>
-        </div>
-        <div class="image-title" id="current-title"></div>
-    </div>
 
-    <script>
-        const carousel = document.querySelector('.carousel');
-        const currentTitle = document.getElementById('current-title');
-        let currentIndex = 0;
+<div class="slider">
+  <div class="slide">
+    <img src="image1.jpg" alt="Sunset sky">
+    <p>Sunset sky</p>
+  </div>
+  <div class="slide">
+    <img src="image2.jpg" alt="Majestic mountain">
+    <p>Majestic mountain</p>
+  </div>
+  </div>
 
-        function showNextSlide() {
-            currentIndex = (currentIndex + 1) % carousel.children.length;
-            updateCarousel();
-        }
-
-        function updateCarousel() {
-            const translateValue = -currentIndex * 100 + '%';
-            carousel.style.transform = `translateX(${translateValue})`;
-            updateTitle();
-        }
-
-        function updateTitle() {
-            const currentImageAlt = carousel.children[currentIndex].querySelector('img').alt;
-            currentTitle.textContent = currentImageAlt;
-        }
-
-        setInterval(showNextSlide, 5000); // Auto slide every 5 seconds
-    </script>
 </body>
+
 </html>
