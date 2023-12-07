@@ -12,7 +12,7 @@
         }
 
         .carousel-container {
-            display: flex;
+            position: relative;
             overflow: hidden;
             margin: 10px; /* Adjust the margin as needed */
         }
@@ -28,9 +28,21 @@
             margin-right: 10px; /* Adjust the margin as needed */
         }
 
-        .image-description {
+        .image-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
             text-align: center;
-            margin-top: 5px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .carousel-container:hover .image-title {
+            opacity: 1;
         }
 
         @media (min-width: 768px) {
@@ -45,35 +57,35 @@
         <div class="carousel">
             <div>
                 <img src="img/gallery-1.jpg" alt="Image 1 - Beautiful Scenery">
-                <div class="image-description">Beautiful Scenery</div>
+                <div class="image-title">Beautiful Scenery</div>
             </div>
             <div>
                 <img src="img/gallery-2.jpg" alt="Image 2 - City Lights at Night">
-                <div class="image-description">City Lights at Night</div>
+                <div class="image-title">City Lights at Night</div>
             </div>
             <div>
                 <img src="img/gallery-3.jpg" alt="Image 3 - Serene Beach Sunset">
-                <div class="image-description">Serene Beach Sunset</div>
+                <div class="image-title">Serene Beach Sunset</div>
             </div>
             <div>
                 <img src="img/gallery-4.jpg" alt="Image 4 - Lush Green Forest">
-                <div class="image-description">Lush Green Forest</div>
+                <div class="image-title">Lush Green Forest</div>
             </div>
             <div>
                 <img src="img/gallery-5.jpg" alt="Image 5 - Urban Landscape">
-                <div class="image-description">Urban Landscape</div>
+                <div class="image-title">Urban Landscape</div>
             </div>
             <div>
                 <img src="img/gallery-6.jpg" alt="Image 6 - Mountain Peaks">
-                <div class="image-description">Mountain Peaks</div>
+                <div class="image-title">Mountain Peaks</div>
             </div>
             <div>
                 <img src="img/gallery-7.jpg" alt="Image 7 - Tranquil Lake View">
-                <div class="image-description">Tranquil Lake View</div>
+                <div class="image-title">Tranquil Lake View</div>
             </div>
             <div>
                 <img src="img/gallery-8.jpg" alt="Image 8 - Colorful Autumn Foliage">
-                <div class="image-description">Colorful Autumn Foliage</div>
+                <div class="image-title">Colorful Autumn Foliage</div>
             </div>
         </div>
     </div>
