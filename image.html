@@ -12,7 +12,7 @@
         }
 
         .carousel-container {
-            position: relative;
+            display: flex;
             overflow: hidden;
             margin: 10px; /* Adjust the margin as needed */
         }
@@ -28,23 +28,6 @@
             margin-right: 10px; /* Adjust the margin as needed */
         }
 
-        .image-title {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            padding: 10px;
-            text-align: center;
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        .carousel-container:hover .image-title {
-            opacity: 1;
-        }
-
         @media (min-width: 768px) {
             .carousel img {
                 flex: 0 0 calc(50% - 10px); /* Two images per row with margin */
@@ -55,41 +38,14 @@
 <body>
     <div class="carousel-container">
         <div class="carousel">
-            <div>
-                <img src="img/gallery-1.jpg" alt="Image 1 - Beautiful Scenery">
-                <div class="image-title">Beautiful Scenery</div>
-           <class>Group Primary School Agbani</class>
-          </div>
-            <div>
-                <img src="img/gallery-2.jpg" alt="Image 2 - City Lights at Night">
-                <div class="image-title">City Lights at Night</div>
-            <class>Group Primary School Agbani</class>
-         </div>
-            <div>
-                <img src="img/gallery-3.jpg" alt="Image 3 - Serene Beach Sunset">
-                <div class="image-title">Serene Beach Sunset</div>
-            </div>
-            <div>
-                <img src="img/gallery-4.jpg" alt="Image 4 - Lush Green Forest">
-                <div class="image-title">Lush Green Forest</div>
-            <class>Group Primary School Agbani</class>
-            </div>
-            <div>
-                <img src="img/gallery-5.jpg" alt="Image 5 - Urban Landscape">
-                <div class="image-title">Urban Landscape</div>
-            </div>
-            <div>
-                <img src="img/gallery-6.jpg" alt="Image 6 - Mountain Peaks">
-                <div class="image-title">Mountain Peaks</div>
-            </div>
-            <div>
-                <img src="img/gallery-7.jpg" alt="Image 7 - Tranquil Lake View">
-                <div class="image-title">Tranquil Lake View</div>
-            </div>
-            <div>
-                <img src="img/gallery-8.jpg" alt="Image 8 - Colorful Autumn Foliage">
-                <div class="image-title">Colorful Autumn Foliage</div>
-            </div>
+            <img src="img/gallery-1.jpg" alt="Image 1">
+            <img src="img/gallery-2.jpg" alt="Image 2">
+            <img src="img/gallery-3.jpg" alt="Image 3">
+            <img src="img/gallery-4.jpg" alt="Image 4">
+            <img src="img/gallery-5.jpg" alt="Image 5">
+            <img src="img/gallery-6.jpg" alt="Image 6">
+            <img src="img/gallery-7.jpg" alt="Image 7">
+            <img src="img/gallery-8.jpg" alt="Image 8">
         </div>
     </div>
 
