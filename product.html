@@ -78,28 +78,45 @@ main {
                 display: inline-block;
                 margin-left: 20px;
             }
-      /* .carouse-container {
+
+
+.slider {
             display: flex;
-            overflow: hidden;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            overflow: hidden; /* Ensure hidden overflow for scrolling effect */
+        }
+
+        .slide {
+            flex: 0 0 50%;
             margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            text-align: center;
         }
 
-        .carouse {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
+        .slide img {
+            max-width: 100%;
+            height: auto;
         }
 
-        .carouse img {
-            width: 100%;
-            object-fit: cover;
-            margin-right: 10px; /* Adjust the margin as needed 
+        p {
+            margin-bottom: 5px;
         }
 
-        @media (min-width: 768px) {
-            .carouse img {
-                flex: 0 0 calc(50% - 10px); /* Two images per row with margin 
+        @media screen and (max-width: 768px) {
+            .slider {
+                flex-wrap: nowrap;
+                overflow-x: scroll;
             }
-	 }*/
+
+            .slide {
+                flex: 0 0 100%;
+            }
+	}
+
+		
 </style>
     
 <body>
@@ -369,20 +386,17 @@ main {
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 <script>
-        const carouse = document.querySelector('.carouse');
-        let currentIndex = 0;
+const slider = document.querySelector('.slider');
 
-        function showNextSlide() {
-            currentIndex = (currentIndex + 1) % carouse.children.length;
-            updateCarouse();
-        }
+    function showNextSlide() {
+        // Move the first slide to the end for a sliding effect
+        const firstSlide = slider.firstElementChild;
+        slider.appendChild(firstSlide);
+    }
 
-        function updateCarouse() {
-            const translateValue = -currentIndex * 100 + '%';
-            carouse.style.transform = `translateX(${translateValue})`;
-        }
+    // Auto slide every 5 seconds
+    setInterval(showNextSlide, 5000);
 
-        setInterval(showNextSlide, 3000); // Auto slide every 5 seconds
 </script>
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
