@@ -1,74 +1,71 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
- <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .slider {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            overflow: hidden; /* Ensure hidden overflow for scrolling effect */
+        }
+
+        .slide {
+            flex: 0 0 50%;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .slide img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        p {
+            margin-bottom: 5px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .slider {
+                flex-wrap: nowrap;
+                overflow-x: scroll;
+            }
+
+            .slide {
+                flex: 0 0 100%;
+            }
+        }
+    </style>
 </head>
-<style>
-.slider {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
-}
-
-.slide {
-  flex: 0 0 50%;
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  background-color: #fff;
-  text-align: center;
-}
-
-.slide img {
-  max-width: 100%;
-  height: auto;
-}
-
-p {
-  margin-bottom: 5px;
-}
-
-@media screen and (max-width: 768px) {
-  .slider {
-    flex-wrap: nowrap;
-    overflow-x: scroll;
-  }
-
-  .slide {
-    flex: 0 0 100%;
-  }
-}
-</style>
 <body>
 
 <div class="slider">
-  <div class="slide">
-    <img src="img/group1.jpg" alt="Sunset sky">
-    <p>Sunset sky</p>
-  </div>
-  <div class="slide">
-    <img src="img/FB_IMG_1635852920250.jpg" alt="Majestic mountain">
-    <p>Majestic mountain</p>
-  </div>
-  <div class="slide">
-    <img src="img/groupteachers.jpg" alt="Sunset sky">
-    <p>Sunset sky</p>
-  </div>
-  <div class="slide">
-    <img src="img/group4.jpg" alt="Majestic mountain">
-    <p>Majestic mountain</p>
-  </div>
-<div class="slide">
-    <img src="img/group3.jpg" alt="Sunset sky">
-    <p>Sunset sky</p>
-  </div>
-  <div class="slide">
-    <img src="img/group2.jpg" alt="Majestic mountain">
-    <p>Majestic mountain</p>
-  </div>
+    <div class="slide">
+        <img src="img/group1.jpg" alt="Sunset sky">
+        <p>Sunset sky</p>
+    </div>
+    <div class="slide">
+        <img src="img/FB_IMG_1635852920250.jpg" alt="Majestic mountain">
+        <p>Majestic mountain</p>
+    </div>
 </div>
 
-</body>
+<script>
+    const slider = document.querySelector('.slider');
 
+    function showNextSlide() {
+        // Move the first slide to the end for a sliding effect
+        const firstSlide = slider.firstElementChild;
+        slider.appendChild(firstSlide);
+    }
+
+    // Auto slide every 5 seconds
+    setInterval(showNextSlide, 5000);
+</script>
+
+</body>
 </html>
